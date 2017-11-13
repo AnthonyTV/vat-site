@@ -1,0 +1,74 @@
+CREATE DATABASE IF NOT EXISTS `database` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `database`;
+
+DROP TABLE IF EXISTS `people`;
+CREATE TABLE `people` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT ,
+  `name` varchar(40) NOT NULL,
+	`surname` varchar(40) NOT NULL,
+	`username` varchar(40) NOT NULL,
+	`password` varchar(32) NOT NULL,
+	`landlord_student` varchar(10) NOT NULL,
+	`sex` varchar(10) NULL,
+	`college` varchar(100) NULL,
+	`email` varchar(100) NOT NULL,
+	`profile_image` varchar(200) NOT NULL,
+	`age` INT(11) NULL, PRIMARY KEY (`id`)
+
+);
+INSERT INTO `people` VALUES (1,'Eric', 'Moyo', 'emoyo', 'password','Landlord', 'Male', NULL, 'emoyo@email.com','images/download.png',NULL);
+INSERT INTO `people` VALUES (2,'Richard', 'Ncube', 'rncube', 'password', 'Landlord', 'Male',NULL, 'rncube@email.com','images/download.pnpg' ,NULL);
+INSERT INTO `people` VALUES (3,'Ralph' , 'Shumba', 'rshumba', 'password','Landlord', 'Male', NULL, 'rshumba@email.com','images/download.png',NULL);
+INSERT INTO `people` VALUES (4,'John' , 'Dombo', 'jdombo', 'password','Landlord', 'Male', NULL, 'jdombo@email.com','images/download.png',NULL);
+INSERT INTO `people` VALUES (5,'Robert' , 'Chimuti', 'rchimuti', 'password','Landlord', 'Male', NULL, 'rchimuti@email.com','images/download.png',NULL);
+INSERT INTO `people` VALUES (6,'Martin', 'Moyo', 'mmoyo', 'password','Landlord', 'Male', NULL, 'mmoyo@email.com','images/download.png',NULL);
+
+
+DROP TABLE IF EXISTS `people_house`;
+CREATE TABLE `people_house` (
+ `id` int(11) NOT NULL AUTO_INCREMENT, 
+`student_id` int(11) NOT NULL,
+  `landlord_id` int(11) NOT NULL,
+`house_id` int(11) NOT NULL,
+  `status` varchar(10) NOT NULL,
+`time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `houses`;
+CREATE TABLE `houses` (
+	`id`	int(11) NOT NULL AUTO_INCREMENT,
+	`address`	varchar(60) NOT NULL,
+	`college`	varchar(100) NOT NULL,
+	`rooms`	int(11) NOT NULL,
+	`capacity`	int(11) NOT NULL,
+	`occupied`	int(11) NOT NULL,
+	`price`	double NOT NULL,
+	`description`	text NOT NULL,
+	`images`	varchar(50) NOT NULL,
+	`landlord_id`	int(11) NOT NULL,
+	`ecocash_name`	varchar(100) NOT NULL,
+	`ecocash_number` varchar(25) NOT NULL, PRIMARY KEY (`id`)
+);
+INSERT INTO `houses` VALUES (1,'2436 Vainona Harare','University of Zimbabwe',5,10,0,45,'Wifi, DSTV, very close to the college','images/0c747b49-6f89-4319-8558-6dd05d55ed24_thumbnail256.jpg',5,'0777524342','Robert Chimuti');
+INSERT INTO `houses` VALUES (2,'14848 Inyathi Road, Selborne Park Bulawayo','National University of Science and Technology',4,8,0,40,'Wifi,Swimming pool, beds','images/0cf550fa-0310-49bd-b3d8-8504307fa9ac_thumbnail256.JPG',2,'0772564372','Richard Ncube');
+INSERT INTO `houses` VALUES (3,'43 Brentwood Rd Chinhoyi','Chinhoyi University of Technology',7,15,0,50,'including transport, stove,
+fridge and beds, WIFI to installed','images/00d9ec20-603b-48ec-b2ac-f7dad373b402_thumbnail256.JPG',3,'0772564872','Ralph Shumba');
+INSERT INTO `houses` VALUES (4,'31 Richard Rd, Sunninghill, Bulawayo','National University of Science and Technology',3,8,0,40,'Wifi,DSTV,tables and chairs beds','images/3c4da228-6681-4c74-9135-d7f5ec150a98_thumbnail256.jpg',2,'0772564372','Richard Ncube');
+INSERT INTO `houses` VALUES (5,'34 Pendenis Mt Pleasant Harare','University of Zimbabwe',8,20,0,35,'Wifi,Swimming pool, beds','images/8f8031f2-d2e4-42c6-9fb7-cc006ba6a1eb-1.jpg',9,'07775243','Robert Chimuti');
+INSERT INTO `houses` VALUES (6,'9 Norfolk Road, Hillside','Chinhoyi University of Technology',6,14,0,65,'5mins away from Campus, fully furnished, Internet,
+DSTV. Cleaning Services Offered','images/44cca9a0-6eb3-406a-809b-a1bd70c651d2_thumbnail256.JPG',4,'0772520372','John Dombo');
+INSERT INTO `houses` VALUES (7,'23 Brentwood Matshamhlophe Bulawayo','National University of Science and Technology',10,22,0,50,'head furnished, WIFI, Library with
+Computers available.','images/50ef4f26-01c4-4e7c-aaf7-3aafef3a0e43_thumbnail256.jpg',6,'0772564372','John Dombo');
+INSERT INTO `houses` VALUES (8,'23 R/Mugabe/3 rd Ave, Bowood Flat 6 Chinhoyi','Chinhoyi University of Technology',4,11,0,50,'Available beds, fridge, stove,computers .','images/68ccb4ec-9d89-4da6-a174-de0da5d0793b_thumbnail256.JPG',1,'0772564562','Eric Moyo');
+
+
+
+
+
+DROP TABLE IF EXISTS `views_count`;
+CREATE TABLE `views_count` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `house_id` int(11) NOT NULL,
+	`landlord_id` int(11) NOT NULL, PRIMARY KEY (`id`)
+);
+

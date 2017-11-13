@@ -1,0 +1,45 @@
+
+h2 {
+	margin-top: 20px;
+}
+
+.name .email .password .info .dropdown {
+	margin: 10px 0 10px 0;
+
+}
+
+.landlord {
+	background-color: #F2EDD7; 
+	margin: 120px;
+}
+
+
+.lwu1 {
+	float: left;
+	border:solid 2px grey;
+	margin-top: 5px;
+	margin-right:25px;
+	margin-bottom: 40px;
+	padding: 20px;
+	}
+
+.lwu2 {
+	float: right;
+	border:solid 2px grey;
+	margin-top: 5px;
+	margin-right:25px;
+	margin-bottom: 40px;
+	padding: 20px;
+}
+
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}
+
+.form {
+	background-color: lightblue;
+	text-align: center;
+	margin: 120px 450px
+	 }

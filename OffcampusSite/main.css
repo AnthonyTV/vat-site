@@ -1,0 +1,82 @@
+/* CSS Document */
+/*****************
+general
+****************/
+
+body3{
+font-family: 'Katibeh', sans-serif;
+}
+#wrapper3 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 5%;
+ }
+
+#about a
+{
+  text-decoration: none;
+	
+}
+
+img {
+max-width:100%;
+}
+
+/*****************
+heading
+****************/
+
+header3{
+float: left;
+margin:0 0 30px 0;
+padding: 5px 0 0 5px;
+width: 100%;
+}
+
+
+/*****************
+page: about
+****************/
+
+#gallery3{
+  margin:0;
+  padding:0;
+  list-style:none;
+       }
+
+#gallery3 li {
+  float:left;
+  width: 25%;
+  margin: 1.5%;
+  color: #bdc3c7;
+    }  
+	#gallery li:nth-child(4n) {
+    clear:left;
+  
+#gallery3 li a p {
+  margin:0;
+  padding:5%;
+  font-size: 0.75em;
+  color: #ff6600;
+  }
+  
+  
+@media screen and (min-width: 480px) {
+  
+
+  
+   /*****************
+page: about us
+****************/
+  #gallery3 li{
+    width: 28.3333%;
+  }
+  
+  #gallery3 li:nth-child(2n) {
+    clear:left;
+  }
+
+}
+/* CSS Document */
+
+

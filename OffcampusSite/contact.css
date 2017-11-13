@@ -1,0 +1,125 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body1 { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background-color:#d3dce6;
+}
+
+/* STRUCTURE */
+
+#pagewrap1 {
+	padding: 5px;
+	width: 960px;
+	margin: 10px auto;
+}
+header1 {
+	height: 100px;
+	padding: 0 15px;
+}
+#content1 {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle1 {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar1 {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen1 and (max-width: 980px) {
+	
+	#pagewrap1 {
+		width: 94%;
+	}
+	#content1 {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle1 {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar1 {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+	header1, footer1 {
+		padding: 1% 4%;
+	}
+}
+
+/* for 700px or less */
+@media screen1 and (max-width: 600px) {
+
+	#content1 {
+		width: auto;
+		float: none;
+	}
+	
+	#middle1 {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar1 {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen1 and (max-width: 480px) {
+
+	header1 {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar1 {
+		
+		width: auto;
+		float: none;
+	}
+
+	}
+
+}
+
+header1, #content1, #middle1, #sidebar1 {
+	margin-bottom: 5px;
+}
+
+#about a {
+	 color: blue;
+	text-decoration:none;
+	}
+	
+#about a:hover {
+	color: #FFBA00;
+	}
+
